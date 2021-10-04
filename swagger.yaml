@@ -82,7 +82,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
-  /mypage/{userID}:
+  /userinfo/{userID}:
     get:
       tags:
         - user
@@ -139,7 +139,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
-  /mypage/{userID}/guest:
+  /userinfo/{userID}/guest:
     get:
       tags:
         - user
@@ -491,6 +491,10 @@ components:
         displayName:
           type: string
           description: 表示名
+        articles:
+          type: array
+          items:
+            $ref: '#/components/schemas/simpleArticleInformation'
       required:
         - userID
         - password
@@ -554,7 +558,7 @@ components:
               type: string
               description: グループのID
               example: gfaho4hodaf
-            userName:
+            groupName:
               type: string
               description: グループの名前
               example: FinTech
