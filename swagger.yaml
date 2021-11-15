@@ -417,7 +417,7 @@ components:
       properties:
         icon:
           type: string
-        FamilyName:
+        familyName:
           type: string
           description: 性名
         firstName:
