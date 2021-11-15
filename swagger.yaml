@@ -417,7 +417,7 @@ components:
       properties:
         icon:
           type: string
-        familyName:
+        FamilyName:
           type: string
           description: 性名
         firstName:
@@ -459,6 +459,23 @@ components:
         token:
           type: string
           description: jwt
+        icon:
+          type: string
+        FamilyName:
+          type: string
+          description: 性名
+        firstName:
+          type: string
+          description: 名前
+        grade:
+          type: string
+          description: 学年
+        corse:
+          type: string
+          description: 所属コース
+        displayName:
+          type: string
+          description: 表示名
       required:
         - token
     MyPageResponse:
