@@ -1,7 +1,7 @@
 openapi: 3.0.2
 info:
   title: Funcy API
-  description: <b>FUNcyのAPI仕</b>
+  description: <b>FUNcyのAPI仕様</b>
   version: 1.0.0
 servers:
   - url: http://localhost:8080/
@@ -573,18 +573,28 @@ components:
           type: string
           description: 説明文
           example: 我々取材班はFUNcyチームのメンバーがタイムカードを切って残業している姿を激写してしまった．
-        image:
-          type: object
-          description: 画像
-          example: null
+        images:
+          type: array
+          items:
+            type: object
+            properties:
+             image:
+               type: string
+               description: 画像
+               example: ijaigjjasopdfjgoiwergio
         URL:
           type: string
           description: 作品のURL
-          example: http://github.com/miraikeitai2020/examples
+          example: https://pbs.twimg.com/profile_images/1380218148649984001/27Mwc0-G_400x400.jpg
         tags:
-          type: string
-          description: 複数のタグを「,」で区切ったもの
-          example: ほげ,ふが,FUNcy,高度ICT演習
+          type: array
+          items:
+            type: object
+            properties:
+             tags: 
+              type: string
+              description: タグ
+              example: ほげ
         group:
           type: string
           description: どのグループに投稿するか
